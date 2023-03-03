@@ -5,6 +5,9 @@ defmodule DiscussWeb.TopicController do
   alias Discuss.Repo
 
   def index(conn, _params) do
+    IO.puts "+++++++++++++++++++++++++++++++++++++++++"
+    IO.inspect(conn.assigns)
+    IO.puts "+++++++++++++++++++++++++++++++++++++++++"
     render conn, "index.html", topics: Repo.all(Topic)
   end
 
@@ -32,7 +35,6 @@ defmodule DiscussWeb.TopicController do
     render conn, "edit.html", changeset: changeset, topic: topic
   end
 
-  @spec update(Plug.Conn.t(), map) :: Plug.Conn.t()
   def update(conn, %{"topic" => topic_params, "id" => topic_id}) do
     topic = Repo.get(Topic, topic_id)
     changeset = Topic.changeset(topic, topic_params)
