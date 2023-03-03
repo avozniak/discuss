@@ -1,3 +1,5 @@
+This is a dummy project from [The Complete Elixir and Phoenix Bootcamp](https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/) on Udemy.
+
 # Discuss
 
 To start your Phoenix server:
