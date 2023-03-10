@@ -47,4 +47,8 @@ defmodule DiscussWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug DiscussWeb.Router
+
+  socket "/socket", DiscussWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 end
